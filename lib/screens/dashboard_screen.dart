@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'add_transaction_screen.dart';
 import 'package:provider/provider.dart';
 import '../providers/transaction_provider.dart';
+import 'charts_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -175,6 +176,27 @@ class _DashboardScreenState extends State<DashboardScreen> {
           );
         },
         child: const Icon(Icons.add, color: Colors.white),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0,
+        onTap: (index) {
+          if (index == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const ChartsScreen()),
+            );
+          }
+        },
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.bar_chart),
+            label: 'Charts',
+          ),
+        ],
       ),
     );
   }
