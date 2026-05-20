@@ -16,7 +16,8 @@ A Flutter mobile app to track daily income and expenses.
 - Provider (state management)
 
 ## Screenshots
-Coming soon...
+<img width="1290" height="2796" alt="localhost_52439_(iPhone 14 Pro Max)" src="https://github.com/user-attachments/assets/bb3ca1cf-b57a-4e41-ae36-b754a8ed1800" />
+
 
 ## Getting Started
 ```bash
