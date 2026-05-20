@@ -3,6 +3,7 @@ import 'add_transaction_screen.dart';
 import 'package:provider/provider.dart';
 import '../providers/transaction_provider.dart';
 import 'charts_screen.dart';
+import 'edit_transaction_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -146,6 +147,19 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                 fontSize: 14,
                               ),
                             ),
+                            IconButton(
+  icon: const Icon(Icons.edit_outlined, color: Colors.blue, size: 20),
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => EditTransactionScreen(index: index),
+      ),
+    );
+  },
+),
+
+
                             IconButton(
                               icon: const Icon(Icons.delete_outline,
                                   color: Colors.red, size: 20),

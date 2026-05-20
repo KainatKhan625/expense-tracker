@@ -42,5 +42,15 @@ void deleteTransaction(int index){
   _transactions.removeAt(index);
   notifyListeners();  
 }
+
+void editTransaction(int index, String title, double amount, bool isIncome, String category) {
+  var box = Hive.box<Transaction>('transactions');
+  _transactions[index].title = title;
+  _transactions[index].amount = amount;
+  _transactions[index].isIncome = isIncome;
+  _transactions[index].category = category;
+  box.putAt(index, _transactions[index]);
+  notifyListeners();
+}
 }
 
